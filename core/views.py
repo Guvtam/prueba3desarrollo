@@ -9,7 +9,11 @@ def home(request):
     return render(request,'core/home.html')
 
 def tienda(request):
-    return render(request,'core/tienda.html')
+    producto = Producto.objects.all()
+    datos = {
+        'producto' : producto
+    }
+    return render(request,'core/tienda.html',datos)
 
 def registroUsuario(request):
     datos = {

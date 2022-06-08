@@ -26,7 +26,7 @@ class Producto(models.Model):
     nombreProduc = models.CharField(max_length=20, verbose_name="Nombre Producto")
     precio = models.IntegerField(verbose_name="Precio Producto")
     descripcion = models.CharField(max_length=200,verbose_name="Descripcion Producto")
-    sku = models.CharField(primary_key=True,max_length=30,verbose_name="Codigo Pproducto")
+    sku = models.CharField(primary_key=True,max_length=30,verbose_name="Codigo Producto")
 
     def __str__(self):
         return self.sku
