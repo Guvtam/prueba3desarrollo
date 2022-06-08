@@ -17,9 +17,9 @@
     <!--NAVBAR-->
 
     <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
-        <a name="inici"></a>
+        <a name="inicio"></a>
         <div class="container-fluid">
-            <img src="flower1.svg" alt="Logo flor " width="30" height="24">
+            <img src="{% static 'core/img/flower1.svg' %}" alt="Logo flor " width="30" height="24">
             <a class="navbar-brand" href="#">Comunidad Floral</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -67,8 +67,8 @@
                     <td>{{ve.nombreProduc}}</td>
                     <td>{{ve.precio}}</td>
                     <td>{{ve.descripcion}}</td>
-                    <td><a href="{% url 'form_mod_producto' ve.producto %}">Modificar</a></td>
-                    <td><a href="{% url 'form_del_producto' ve.producto %}">Eliminar</a></td>
+                    <td><a href="{% url 'form_mod_producto' ve.sku %}">Modificar</a></td>
+                    <td><a href="{% url 'form_del_producto' ve.sku %}">Eliminar</a></td>
                   </tr>
                   {% endfor %}
                 </tbody>
@@ -87,7 +87,7 @@
                 <div class="row">
                     <div class="col-lg-3 mb-3">
                         <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
-                            <img src="flower1.svg" alt="Logo flor " width="30" height="24">
+                            <img src="{% static 'core/img/flower1.svg' %}" alt="Logo flor " width="30" height="24">
                             <span class="fs-5">Comunidad floral</span>
                         </a>
 
